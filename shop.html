@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main p-5" style="background:none">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <!-- Tombol Hamburger -->
+                <button class="navbar-toggler" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Menu -->
+                <div class="navbar-menu" id="navbarMenu">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="btn btn-dark">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="btn btn-dark">About</a>
+                        </li>
+                        <li>
+                            <a href="pengantar.html" class="btn btn-dark">Pengantar</a>
+                        </li>
+                        <li>
+                            <a href="shop.html" class="btn btn-dark">Shop</a>
+                        </li>
+                        <li>
+                            <a href="kontak.html" class="btn btn-dark">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="m-5 p-5" style="background: url('img/5.JPG'); background-size:cover; opacity:80%">
+            <h1 class="p-5 pb-1 d-flex justify-content-end bswash hijau" style="font-size:100px">Shop</h1>
+        </div>
+        <div class="container m-5">
+            <p class="p-5 m-5 ubuntu text-center fs-3">
+                Until recently, the prevailing view assumed lorem ipsum was
+                <br>
+                born as a nonsense text.
+            </p>
+        </div>
+        <div class="container m-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-12 col-lg-2 hijau text-center">
+                    <!-- Tombol Prev -->
+                    <button id="prevBtn" class="btn btn-success">Prev</button>
+                </div>
+                <!-- Container Produk -->
+                <div class="col-12 col-md-12 col-lg-4 mx-4 p-3 text-center">
+                    <div id="productContainer" class="card p-4 border-0 livvic hijau" style="border-radius: 10px; box-shadow: 2px 2px 2px 2px lightgray">
+                        <!-- Konten Produk akan diubah via JavaScript --></div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-2 hijau text-center">
+                    <!-- Tombol Next -->
+                    <button id="nextBtn" class="btn btn-success">Next</button>
+                </div>
+            </div>
+        </div>
+        <footer class="p-5 bg-hijau text-light w-100" style="overflow: hidden;">
+            <div class="row p-3">
+                <div class="col-12 col-md-12 col-lg-5">
+                    <p>
+                        About Batik
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio! Navigations
+                    </p>
+                </div>
+                <div class="col-12 col-md-12 col-lg-2 mx-5">
+                    <p>Home</p>
+                    <p>About</p>
+                    <p>Shop</p>
+                    <p>Kontak</p>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <p>Subscribe Newsletter</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit minima minus odio.
+                        Send
+                    </p>
+                    <input type="email" placeholder="Email..." class="p-2 w-100">
+                </div>
+            </div>
+        </footer>
+        <script>
+            document.querySelector('.navbar-toggler').addEventListener('click', function() {
+                var menu = document.getElementById('navbarMenu');
+                menu.classList.toggle('show');
+              });
+              document.addEventListener("DOMContentLoaded", function() {
+                var products = [
+                    { image: "img/6.JPG", title: "Batik Ungu", price: "Rp 200.000,00" },
+                    { image: "img/6.JPG", title: "Batik Merah", price: "Rp 250.000,00" },
+                    { image: "img/6.JPG", title: "Batik Biru", price: "Rp 150.000,00" },
+                    // Tambahkan lebih banyak produk jika diperlukan
+                ];
+            
+                var currentIndex = 0;
+                var productContainer = document.getElementById('productContainer');
+            
+                function updateProduct() {
+                    productContainer.innerHTML = `
+                        <img src="${products[currentIndex].image}" style="border-radius:10px">
+                        <p>${products[currentIndex].title}</p>
+                        <strong>Order</strong>
+                        <p class="pt-3">Harga ${products[currentIndex].price}</p>
+                    `;
+                }
+            
+                document.getElementById('prevBtn').addEventListener('click', function() {
+                    currentIndex = (currentIndex > 0) ? currentIndex - 1 : products.length - 1;
+                    updateProduct();
+                });
+            
+                document.getElementById('nextBtn').addEventListener('click', function() {
+                    currentIndex = (currentIndex < products.length - 1) ? currentIndex + 1 : 0;
+                    updateProduct();
+                });
+            
+                // Inisialisasi produk pertama
+                updateProduct();
+            });
+        </script>
+    </body>
+</html>

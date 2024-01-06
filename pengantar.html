@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main p-5" style="background:none">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <!-- Tombol Hamburger -->
+                <button class="navbar-toggler" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Menu -->
+                <div class="navbar-menu" id="navbarMenu">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="btn btn-dark">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="btn btn-dark">About</a>
+                        </li>
+                        <li>
+                            <a href="pengantar.html" class="btn btn-dark">Pengantar</a>
+                        </li>
+                        <li>
+                            <a href="shop.html" class="btn btn-dark">Shop</a>
+                        </li>
+                        <li>
+                            <a href="kontak.html" class="btn btn-dark">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="d-flex justify-content-lg-start m-5">
+            <img src="img/star.png" style="width: 200px; height: 200px">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <h1 class="bswash hijau" style="font-size:100px; border:none; border-bottom:3px solid #424530; width:100%">Pengantar</h1>
+        </div>
+        <div class="m-5">
+            <div class="d-flex justify-content-around mx-5">
+                <div>
+                    <center>
+                        <img src="img/4.JPG" style="width:70%; height: 70%">
+                    </center>
+                </div>
+                <div class="ubuntu fs-4" style="color: #424530; text-align:justify">
+                    <p>Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its 'words' loosely approximate the frequency with which letters</p>
+                    <p>Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its 'words' loosely approximate the frequency with which letters</p>
+                </div>
+            </div>
+            <div class="ubuntu fs-4 m-5">
+                <div class="mx-5">
+                    <p>Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its 'words' loosely approximate the frequency with which letters</p>
+                </div>
+            </div>
+        </div>
+        <footer class="p-5 bg-hijau text-light w-100" style="overflow: hidden;">
+            <div class="row p-3">
+                <div class="col-12 col-md-12 col-lg-5">
+                    <p>
+                        About Batik
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio! Navigations
+                    </p>
+                </div>
+                <div class="col-12 col-md-12 col-lg-2 mx-5">
+                    <p>Home</p>
+                    <p>About</p>
+                    <p>Shop</p>
+                    <p>Kontak</p>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <p>Subscribe Newsletter</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit minima minus odio.
+                        Send
+                    </p>
+                    <input type="email" placeholder="Email..." class="p-2 w-100">
+                </div>
+            </div>
+        </footer>
+        <script>
+            document.querySelector('.navbar-toggler').addEventListener('click', function() {
+                var menu = document.getElementById('navbarMenu');
+                menu.classList.toggle('show');
+              });
+        </script>
+    </body>
+</html>

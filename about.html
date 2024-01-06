@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main p-5" style="background:none">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <!-- Tombol Hamburger -->
+                <button class="navbar-toggler" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Menu -->
+                <div class="navbar-menu" id="navbarMenu">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="btn btn-dark">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="btn btn-dark">About</a>
+                        </li>
+                        <li>
+                            <a href="pengantar.html" class="btn btn-dark">Pengantar</a>
+                        </li>
+                        <li>
+                            <a href="shop.html" class="btn btn-dark">Shop</a>
+                        </li>
+                        <li>
+                            <a href="kontak.html" class="btn btn-dark">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="bg-hijau mb-5">
+            <h1 class="bswash text-light p-5" style="font-size: 100px; margin-left: 100px">About</h1>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-6 ubuntu hijau fs-3 p-5 mt-5">
+                <p class="mb-5">Berawal dari 5 pengrajin batik dan tenun yang berdiri sendiri-sendiri, mulai melihat potensi untuk memiliki fondasi yang lebih kuat. Bapak Amin, adalah pelopor berdirinya Sentrawastra. Produksi yang dilakukan di halaman belakang rumahnya selama 20 tahun berkembang menjadi pusat produksi kain warna alam di Desa Mojotrisno.</p>
+                <p class="mb-5">Sentrawastra Warna Alam Mojotrisno juga terbuka bagi pengrajin kain lain yang ingin bergabung.</p>
+                <p class="mb-5">Sentrawastra Warna Alam Mojotrisno menjadi sentra kain yang memakai pewarna alam di Jawa Timur. Dengan fasilitas untuk belajar dan melihat produksi secara langsung.</p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-6" style="margin-top: -264px;">
+                <img src="img/3.png" class="w-100">
+                <div class="bg-hijau" style="padding: 100px;"></div>
+            </div>
+        </div>
+    </div>
+    <footer class="p-5 bg-hijau text-light w-100" style="overflow: hidden;">
+        <div class="row p-3">
+            <div class="col-12 col-md-12 col-lg-5">
+                <p>
+                    About Batik
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio! Navigations
+                </p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-2 mx-5">
+                <p>Home</p>
+                <p>About</p>
+                <p>Shop</p>
+                <p>Kontak</p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-3">
+                <p>Subscribe Newsletter</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit minima minus odio.
+                        Send
+                </p>
+                <input type="email" placeholder="Email..." class="p-2 w-100">
+            </div>
+        </div>
+    </footer>
+    <script>
+            document.querySelector('.navbar-toggler').addEventListener('click', function() {
+                var menu = document.getElementById('navbarMenu');
+                menu.classList.toggle('show');
+              });
+    </script>
+</body>
+</html>
